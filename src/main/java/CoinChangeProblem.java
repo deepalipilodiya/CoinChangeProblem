@@ -38,6 +38,10 @@ public class CoinChangeProblem {
     public static void printCoins(int[] coinUsed,int amt){
         while(amt>0){
             int current_Coin = coinUsed[amt];
+            if(current_Coin == 0){
+                System.out.println("Please enter a valid Order Amount");
+                break;
+            }
             System.out.println("Print Num :" + current_Coin );
             amt = amt - current_Coin;
         }
